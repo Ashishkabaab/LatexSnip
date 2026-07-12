@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.zip
+*.crx
+*.pem
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.local
+
+# Logs
+*.log

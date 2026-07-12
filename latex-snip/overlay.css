@@ -1,0 +1,190 @@
+/* overlay.css — injected once per snip session */
+
+#latex-snip-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: crosshair;
+  user-select: none;
+}
+
+#latex-snip-rect {
+  position: fixed;
+  border: 1.5px solid #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+  z-index: 2147483647;
+  pointer-events: none;
+  display: none;
+}
+
+#latex-snip-hint {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #f9fafb;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 6px 14px;
+  border-radius: 999px;
+  z-index: 2147483647;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Panel ---------------------------------------------------------------- */
+
+#latex-snip-panel {
+  position: fixed;
+  z-index: 2147483647;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  padding: 12px;
+  padding-top: 28px;
+  max-width: 480px;
+  /* Draggable: show move cursor everywhere except on interactive children */
+  cursor: move;
+}
+
+#latex-snip-panel button,
+#latex-snip-panel pre,
+#latex-snip-panel a {
+  cursor: auto;
+}
+
+#latex-snip-panel button {
+  cursor: pointer;
+}
+
+/* Close button */
+#latex-snip-panel .latex-snip-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+#latex-snip-panel .latex-snip-close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Snip preview image */
+#latex-snip-panel img {
+  display: block;
+  max-width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Label above the KaTeX preview, distinguishing it from the captured image */
+#latex-snip-panel .latex-snip-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* KaTeX rendered output */
+#latex-snip-panel .latex-snip-rendered {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  font-size: 16px;
+  text-align: center;
+  color: #111827;
+}
+
+/* Raw LaTeX block */
+#latex-snip-panel .latex-snip-latex {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: 12px/1.5 "SF Mono", Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0 0 8px;
+}
+
+/* Button row */
+#latex-snip-panel .latex-snip-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+#latex-snip-panel button.primary {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font: inherit;
+}
+
+#latex-snip-panel button.primary:hover {
+  background: #4f46e5;
+}
+
+#latex-snip-panel button.secondary {
+  background: #f3f4f6;
+  color: #111827;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font: inherit;
+}
+
+#latex-snip-panel button.secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Provider label */
+#latex-snip-panel .latex-snip-engine {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6366f1;
+  margin-bottom: 6px;
+}
+
+/* Error state */
+#latex-snip-panel .latex-snip-error {
+  color: #b91c1c;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Recognizing animation — flowing diagonal shimmer on the panel border */
+@keyframes latex-snip-shimmer {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+#latex-snip-panel.latex-snip-recognizing {
+  background-image: linear-gradient(
+    135deg,
+    #ffffff 40%,
+    #e0e7ff 50%,
+    #ffffff 60%
+  );
+  background-size: 200% 200%;
+  animation: latex-snip-shimmer 1.2s linear infinite;
+}
