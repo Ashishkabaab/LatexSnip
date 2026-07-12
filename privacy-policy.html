@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LaTeX Snip — Privacy Policy</title>
+  <style>
+    body {
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      max-width: 680px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+    h1 { font-size: 24px; margin-bottom: 4px; }
+    h2 { font-size: 17px; margin-top: 32px; }
+    p, li { color: #374151; }
+    .updated { color: #6b7280; font-size: 14px; margin-top: 0; }
+    a { color: #6366f1; }
+  </style>
+</head>
+<body>
+
+  <h1>LaTeX Snip — Privacy Policy</h1>
+  <p class="updated">Last updated: July 2026</p>
+
+  <p>
+    LaTeX Snip is a Chrome extension that converts screenshots of mathematical
+    expressions into LaTeX using a vision AI provider of your choice. This policy
+    explains what data the extension handles and how.
+  </p>
+
+  <h2>What data LaTeX Snip handles</h2>
+
+  <p><strong>API keys.</strong> When you enter an API key in the extension's
+  Settings page, that key is stored locally on your device using Chrome's
+  built-in <code>chrome.storage.local</code> API. It is never transmitted to
+  any server operated by LaTeX Snip, and it never leaves your device except
+  in the API request described below.</p>
+
+  <p><strong>Screenshot data.</strong> When you drag a selection over part of
+  your screen, LaTeX Snip captures that region as an image and sends it
+  directly to the AI provider you have chosen (Anthropic, OpenAI, or Google)
+  to generate LaTeX. This image is sent solely for the purpose of math
+  recognition. LaTeX Snip does not store, log, or retain any copy of the
+  image.</p>
+
+  <h2>What LaTeX Snip does NOT do</h2>
+  <ul>
+    <li>Does not collect or transmit your API key to any third party other than
+    the AI provider you have selected</li>
+    <li>Does not collect any personal information, browsing history, or usage
+    statistics</li>
+    <li>Does not use cookies or any form of tracking</li>
+    <li>Does not have a backend server — all logic runs locally in your browser
+    except for the API call to your chosen AI provider</li>
+    <li>Does not share any data with advertisers or analytics services</li>
+  </ul>
+
+  <h2>Third-party AI providers</h2>
+  <p>
+    Depending on which provider you select in Settings, your screenshot is sent
+    to one of the following services. Each has its own privacy policy governing
+    how it handles API requests:
+  </p>
+  <ul>
+    <li><strong>Anthropic (Claude):</strong>
+      <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>
+    </li>
+    <li><strong>OpenAI (GPT-4o):</strong>
+      <a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a>
+    </li>
+    <li><strong>Google (Gemini):</strong>
+      <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </li>
+  </ul>
+  <p>
+    LaTeX Snip has no control over how these providers handle data once it is
+    received. Please review their respective policies before use.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>LaTeX Snip requests the following Chrome permissions:</p>
+  <ul>
+    <li><strong>activeTab / scripting:</strong> Required to inject the
+    drag-select overlay onto the page you are viewing so you can draw a
+    selection box around a math expression.</li>
+    <li><strong>storage:</strong> Required to save your provider preference and
+    API key locally on your device.</li>
+    <li><strong>host permissions (&lt;all_urls&gt;):</strong> Required because
+    the extension must be able to inject the selection overlay onto any webpage
+    the user is viewing, regardless of the domain.</li>
+  </ul>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes materially, the "Last updated" date above will be
+    revised. Continued use of the extension after any changes constitutes
+    acceptance of the updated policy.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    If you have questions about this privacy policy, please open an issue on
+    the
+    <a href="https://github.com/vijayhardaha/latex-snip" target="_blank">
+      LaTeX Snip GitHub repository</a>.
+  </p>
+
+</body>
+</html>
