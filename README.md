@@ -67,7 +67,7 @@ Install directly from the [Chrome Web Store](https://chromewebstore.google.com/d
 |---|---|---|
 | Anthropic | `claude-sonnet-4-6` | Best overall accuracy on complex/multi-line math |
 | OpenAI | `gpt-4o` | Strong on clean printed equations |
-| Google | `gemini-1.5-flash` | Fast; good on standard notation |
+| Google | `gemini-3.5-flash` | Fast; good on standard notation |
 
 All three handle clean printed math well. Anthropic's Claude tends to handle messier inputs (handwriting, low contrast, unusual notation) most reliably.
 
