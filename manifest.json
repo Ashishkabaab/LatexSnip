@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LaTeX Snip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Drag-select any math on screen → LaTeX, instantly. Bring your own API key.",
   "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": ["<all_urls>"],
