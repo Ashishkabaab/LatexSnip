@@ -32,7 +32,7 @@ Drag a box over an equation → a vision AI reads it → the result renders as t
 
 ### Chrome Web Store
 
-> Coming soon.
+Install directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/latex-snip/llphheajphjkomkmmkmbkhnihlpooomi?authuser=0&hl=en).
 
 ---
 
